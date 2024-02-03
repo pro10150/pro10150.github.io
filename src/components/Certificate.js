@@ -1,6 +1,6 @@
 function Certificate() {
     return (
-        <h1>Certificate</h1>
+        <big className="section-header">Certificate</big>
     )
 }
 

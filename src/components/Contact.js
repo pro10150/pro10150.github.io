@@ -1,6 +1,6 @@
 function Contact() {
     return(
-        <h1>Contact</h1>
+        <big className="section-header">Contact</big>
     )
 }
 
