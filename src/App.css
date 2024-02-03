@@ -40,7 +40,6 @@
 section {
   display: grid;
   place-items: center;
-  height: 100vh;
   font-size: 32px;
   font-weight: bold;
 }
@@ -114,6 +113,11 @@ li:hover {
   align-items: center;
 }
 
+.home-body {
+  height: 100vh;
+  padding-top: 10rem;
+}
+
 /* .item-section {
   padding-top: 2rem;
   align-content: flex-start;
@@ -149,7 +153,8 @@ li:hover {
 }
 
 #about-me-title {
-  padding-left: 30rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   text-align: left;
   align-self: flex-start;
   font-size: larger;
@@ -158,8 +163,8 @@ li:hover {
 }
 
 .about-me-detail {
-  padding-left: 30rem;
-  padding-right: 30rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   font-weight: normal;
   align-items: flex-start;
   text-align: left;
@@ -168,5 +173,99 @@ li:hover {
 
 .item-section {
   padding-top: 5rem;
-  align-content: flex-start;
+}
+
+.hStackContainer {
+  display: flex;
+  padding-right: 0.5rem;
+  text-align: left;
+}
+
+.circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  
+  aspect-ratio: 1/1;
+  background-color: #EB455F;
+}
+
+.year-header {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 32px;
+  color: #2B3467;
+}
+
+.type-header {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  color: #2B3467;
+}
+
+.detail-inline {
+  display: flex;
+}
+
+.detail-body {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  color: #2B3467;
+  padding-right: 0.25rem;
+}
+
+.grade-body {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 20px;
+  color: #2B3467;
+}
+
+.name-body {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 20px;
+  color: #2B3467;
+
+}
+
+.list-template-line {
+  width: 0.5rem;
+  height: 100%;
+  background-color: #EB455F;
+}
+
+.list-template-body {
+  display: grid;
+  grid-template-columns: auto; 
+  text-align: center;
+}
+
+.list-template-data {
+  display: block;
+}
+
+.section-header {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 48px;
+  color: #2B3467;
+}
+
+.section-detail {
+  text-align: left;
+  justify-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.section-title {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 40px;
+  color: #EB455F;
 }

@@ -1,6 +1,6 @@
 function Experience() {
     return (
-        <h1>Experience</h1>
+        <big className="section-header">Experience</big>
     )
 }
 

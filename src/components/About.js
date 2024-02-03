@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div>
+        <div className="section-detail">
             <h1 id="about-me-title">Everything about me!</h1>
             <h3 className="about-me-detail">
                 I’m an iOS Developer located in Thailand. I have a genuine interest and passion for  iOS platform.
