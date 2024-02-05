@@ -52,3 +52,5 @@ export const ExperiencePastProjectModel = [
         ]
     }
 ]
+
+export default ExperiencePastProjectModel
