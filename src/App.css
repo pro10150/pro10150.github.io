@@ -173,6 +173,7 @@ li:hover {
 
 .item-section {
   padding-top: 5rem;
+  align-items: flex-start;
 }
 
 .hStackContainer {
@@ -246,7 +247,8 @@ li:hover {
 }
 
 .list-template-data {
-  display: block;
+  display: grid;
+  
 }
 
 .section-header {
@@ -258,7 +260,10 @@ li:hover {
 
 .section-detail {
   text-align: left;
-  justify-content: center;
+  display: grid;
+  justify-items: left;
+  min-width: 100vw;
+  margin: auto;
   padding-left: 5rem;
   padding-right: 5rem;
 }
@@ -268,4 +273,12 @@ li:hover {
   font-weight: 700;
   font-size: 40px;
   color: #EB455F;
+}
+
+.chip-container {
+  display: flex;
+}
+
+.chip-item {
+  margin-right: 0.5rem;
 }
