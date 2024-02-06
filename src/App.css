@@ -272,6 +272,11 @@ li:hover {
   padding-right: 5rem;
 }
 
+.about-body {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .section-title {
   font-family: "Inter";
   font-weight: 700;
@@ -285,4 +290,50 @@ li:hover {
 
 .chip-item {
   margin-right: 0.5rem;
+}
+
+.contact-body {
+  height: 100vh;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.contact-logo-button {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem;
+}
+
+.contact-social-media {
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-social-media-separator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #2B3467;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.contact-header {
+  font-family: "Inter";
+  font-size: 72px;
+  font-weight: 700;
+  color: #2B3467;
+}
+
+.contact-subheader {
+  font-family: "Inter";
+  font-size: 72px;
+  font-weight: 700;
+  color: #EB455F;
+}
+
+.contact-detail {
+  font-family: "Inter";
+  font-size: 36px;
+  font-weight: 700;
+  color: #2B3467;
 }

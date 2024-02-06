@@ -11,7 +11,6 @@ function ExperienceWork({name, role, startDate, workType, endDate}) {
     } else {
         dateDifference = calculateDateDifference(startDate, new Date())
     }
-    console.log(dateDifference)
     return (
         <div>
             <span className="year-header detail-inline">
