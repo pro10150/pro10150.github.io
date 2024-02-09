@@ -15,6 +15,7 @@ function ExperiencePastProject({name, hotlink, description, skill}) {
                     </div>
                 ))}
             </div>
+            <br />
         </div>
     )
 }
