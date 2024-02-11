@@ -10,12 +10,16 @@ function Certificate() {
 
     var FilteredCertificateTestScoreModel = CertificateTestScoreModel.filter((testScore) => testScore.expiredDate > new Date())
 
+    const specializationCount = CertificateSpecializationModel.length
+    const courseCount = CertificateCourseModel.length
+    const testScoreCount = CertificateTestScoreModel.length
+
     return (
         <div>
             <big className="section-header">Certificate</big>
-            <ListTemplate component={CertificateSpecialization} data={CertificateSpecializationModel} sectionTitle="Specialization"/>
-            <ListTemplate component={CertificateCourse} data={CertificateCourseModel} sectionTitle="Coursework"/>
-            <ListTemplate component={CertificateTestScore} data={FilteredCertificateTestScoreModel} sectionTitle="Test Score"/>
+            <ListTemplate component={CertificateSpecialization} data={CertificateSpecializationModel} sectionTitle={`Specialization(${specializationCount})`}/>
+            <ListTemplate component={CertificateCourse} data={CertificateCourseModel} sectionTitle={`Coursework(${courseCount})`}/>
+            <ListTemplate component={CertificateTestScore} data={FilteredCertificateTestScoreModel} sectionTitle={`Test Score(${testScoreCount})`}/>
         </div>
     )
 }
