@@ -18,10 +18,10 @@ function ExperienceWork({name, role, startDate, workType, endDate}) {
             <h3 className="detail-body">{workType}</h3>
             <span className="detail-inline detail-body ">
             {dateDifference.years != 0 && 
-            <h3 className="detail-body">{dateDifference.years} years
+            <h3 className="detail-body">{dateDifference.years} year{(dateDifference.years > 1) && "s"}
             </h3>
             } 
-            <h3 className="detail-body">{dateDifference.months} months</h3>
+            <h3 className="detail-body">{dateDifference.months} month{(dateDifference.months > 1) && "s"}</h3>
             </span>
             <h1 className="name-body">{name}</h1>
             <br />
