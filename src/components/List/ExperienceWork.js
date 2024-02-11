@@ -13,13 +13,7 @@ function ExperienceWork({name, role, startDate, workType, endDate}) {
     }
     return (
         <div>
-            <span className="year-header detail-inline">
-            <h3 className="year-header">{formattedStartDate} </h3>
-            {formattedEndDate && <h3 
-            className="year-header">&nbsp;- {formattedEndDate}
-            </h3>
-            }
-            </span>
+            <h3 className="year-header">{formattedStartDate}{formattedEndDate && ` - ${formattedEndDate}`} </h3>
             <h2 className="detail-body">{role}</h2>
             <h3 className="detail-body">{workType}</h3>
             <span className="detail-inline detail-body ">

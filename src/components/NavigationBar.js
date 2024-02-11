@@ -16,38 +16,46 @@ function NavigationBar() {
         <div className="App">
             <header className="nav">
                 <nav className="nav__container__actions">
-                    <ul>
-                        <li>
-                            <Link activeClass="active" smooth spy to="home">
-                                <img className="logo-image" src={require("../assets/images/noppakun_web_portfolio_logo.png")} alt="" />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link activeClass="active" smooth spy to="about">
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link activeClass="active" smooth spy to="certificate">
-                                Certificate
-                            </Link>
-                        </li>
-                        <li>
-                            <Link activeClass="active" smooth spy to="education">
-                                Education
-                            </Link>
-                        </li>
-                        <li>
-                            <Link activeClass="active" smooth spy to="experience">
-                                Experience
-                            </Link>
-                        </li>
-                        <li>
-                            <Link activeClass="active" smooth spy to="contact">
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
+                    <div>
+                        <ul>
+                            <li className="logo-nav">
+                                <Link activeClass="active" smooth spy to="home">
+                                    <img className="logo-image" src={require("../assets/images/noppakun_web_portfolio_logo.png")} alt="" />
+                                </Link>
+                            </li>
+                            <li className="section-nav">
+                                <Link activeClass="active" smooth spy to="about">
+                                    About
+                                </Link>
+                            </li>
+                            <li className="section-nav">
+                                <Link activeClass="active" smooth spy to="certificate">
+                                    Certificate
+                                </Link>
+                            </li>
+                            <li className="section-nav">
+                                <Link activeClass="active" smooth spy to="education">
+                                    Education
+                                </Link>
+                            </li>
+                            <li className="section-nav">
+                                <Link activeClass="active" smooth spy to="experience">
+                                    Experience
+                                </Link>
+                            </li>
+                            <li className="section-nav">
+                                <Link activeClass="active" smooth spy to="contact">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="hamburger">
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
                 </nav>
             </header>   
             <section id="home">
