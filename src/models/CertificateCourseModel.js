@@ -161,5 +161,18 @@ export const CertificateCourseModel = [
         issuedDate: new Date("2024-02-08"),
         issuedOrganization: "Coursera",
         name: "Create the User Interface in Android Studio"
+    }, {
+        credentialId: "ERJNSNMWXQHU",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/ERJNSNMWXQHU",
+        instructor: "Meta",
+        issuedDate: new Date("2024-02-24"),
+        issuedOrganization: "Coursera",
+        name: "Advanced Programming in Kotlin"
+    }, {
+        credentialId: "YK7UJLEHHN87",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/verify/YK7UJLEHHN87",
+        instructor: "Meta",
+        issuedDate: new Date("2024-03-27"),
+        name: "Working with Data in Android"
     }
 ]
