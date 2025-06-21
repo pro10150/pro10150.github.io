@@ -50,6 +50,24 @@ export const ExperiencePastProjectModel = [
             "FlaskAPI",
             "SQL"
         ]
+    }, {
+        name: "KKP BIZ",
+        hotlink: "https://apps.apple.com/us/app/kkp-biz/id1665856562?l=vi",
+        description: "A lagal entity banking application for Kiatnakin bank's clients. Responsible for more than half of the iOS frontend user interface and business logic.",
+        skill: [
+            "Kotlin Mobile Multiplatform",
+            "Swift",
+            "Storyboard"
+        ]
+    }, {
+        name: "Rimping",
+        hotlink: "https://apps.apple.com/th/app/rimping/id6738688550",
+        description: "A supermarket application for Rimping's clients. Responsible for most of the entire application for iOS side. Built using SwiftUI and KMM.",
+        skill: [
+            "Kotlin Mobile Multiplatform",
+            "Swift",
+            "SwiftUI"
+        ]
     }
 ]
 
