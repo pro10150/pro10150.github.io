@@ -21,6 +21,7 @@ yarn-debug.log*
 
 # Testing
 /coverage
+.playwright-mcp/
 
 # Local planning docs (not for a public repo)
 upgrade-plan.md
