@@ -7,7 +7,7 @@ import ListTemplate from "./List/ListTemplate"
 function Experience() {
     return (
         <div>
-            <big className="section-header">Expereience</big>
+            <big className="section-header">Experience</big>
             <ListTemplate component={ExperienceWork} data={ExperienceWorkModel} sectionTitle="Work Experience"/>
             <ListTemplate component={ExperiencePastProject} data={ExperiencePastProjectModel} sectionTitle="My Past Projects"/>
         </div>
