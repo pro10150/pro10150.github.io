@@ -5,7 +5,7 @@ function ExperiencePastProject({name, hotlink, description, skill}) {
     const repoName = getRepoNameFromUrl(hotlink)
     return (
         <div className="past-project">
-            <a className="year-header github-header" href={hotlink} target="_blank">{repoName.repoName}</a>
+            <a className="year-header github-header" href={hotlink} target="_blank">{repoName ? repoName.repoName : name}</a>
             {/* <h1>{repoName.username}/{repoName.repoName}</h1> */}
             <h2 className="name-body">{name}</h2>
             <h3 className="detail-body">{description}</h3>
