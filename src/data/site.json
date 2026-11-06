@@ -1,0 +1,26 @@
+{
+  "name": "Noppakun Anantakitthawon",
+  "nickname": { "en": "Por", "th": "ปอ" },
+  "jobTitle": "iOS & Flutter Developer",
+  "location": { "en": "Bangkok, Thailand", "th": "กรุงเทพฯ" },
+  "url": "https://www.noppakunanantakitthawon.com",
+  "email": "noppakun.antk@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/noppakun-anan/",
+  "github": "https://github.com/pro10150",
+  "freelanceUrl": "https://fastwork.com/user/poranaiiii",
+  "freelanceLabel": { "en": "See my Fastwork profile ↗", "th": "ดูโปรไฟล์ Fastwork ↗" },
+  "resume": "/files/Noppakun_Anantakitthawon_Resume.pdf",
+  "resumeTechnicalBA": "/files/Noppakun_Anantakitthawon_Resume_Technical_BA.pdf",
+  "openToWork": true,
+  "openToFreelance": true,
+  "seo": {
+    "title": {
+      "en": "Noppakun Anantakitthawon (Por) | iOS & Flutter Developer, Bangkok",
+      "th": "Noppakun Anantakitthawon (ปอ) | iOS & Flutter Developer กรุงเทพฯ"
+    },
+    "description": {
+      "en": "Noppakun Anantakitthawon (Por), iOS & Flutter developer and technical BA in Bangkok. Banking, trading and retail apps with SwiftUI, Flutter and KMP. Open to roles and freelance.",
+      "th": "Noppakun Anantakitthawon (ปอ) นักพัฒนา iOS & Flutter และ Technical BA ในกรุงเทพฯ ทำแอปธนาคาร หลักทรัพย์ และรีเทล ด้วย SwiftUI, Flutter และ KMP พร้อมรับงานประจำและฟรีแลนซ์"
+    }
+  }
+}

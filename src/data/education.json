@@ -1,0 +1,17 @@
+[
+  {
+    "when": "2019 – 2023",
+    "name": { "en": "King Mongkut's University of Technology Thonburi", "th": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (KMUTT)" },
+    "detail": { "en": "B.Sc. Applied Computer Science · Second Class Honors · GPA 3.51", "th": "วท.บ. วิทยาการคอมพิวเตอร์ประยุกต์ · เกียรตินิยมอันดับ 2 · GPA 3.51" }
+  },
+  {
+    "when": { "en": "Jul 2021", "th": "ก.ค. 2021" },
+    "name": "NUS Enterprise Summer Programme",
+    "detail": { "en": "COO of a 5-person, 3-country team pitching \"Wishdish\": personas, TAM/SAM/SOM, business model, risk.", "th": "COO ของทีม 5 คนจาก 3 ประเทศ pitch ไอเดีย \"Wishdish\": persona, TAM/SAM/SOM, โมเดลธุรกิจ, ความเสี่ยง" }
+  },
+  {
+    "when": { "en": "Jul – Sep 2020", "th": "ก.ค. – ก.ย. 2020" },
+    "name": "UMAP-COIL Joint Program · Kansai University",
+    "detail": { "en": "SDG program; co-presented a carbon-neutrality case study with a Southeast Asian team. Scored 90/100.", "th": "โครงการด้าน SDGs ร่วมนำเสนอเคสความเป็นกลางทางคาร์บอนกับทีมจากเอเชียตะวันออกเฉียงใต้ ได้คะแนน 90/100" }
+  }
+]

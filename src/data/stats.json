@@ -1,0 +1,6 @@
+[
+  { "value": "3+", "label": { "en": "years shipping to production", "th": "ปีที่ปล่อยแอปขึ้น production" } },
+  { "value": "3", "label": { "en": "client apps live on the App Store", "th": "แอปลูกค้าที่อยู่บน App Store" } },
+  { "value": "1,000+", "label": { "en": "unit tests in one side project 🙃", "th": "ยูนิตเทสต์ในโปรเจกต์ส่วนตัวเดียว 🙃" } },
+  { "value": "45", "label": { "en": "bugs squashed before one launch", "th": "บั๊กที่ปราบก่อนเปิดตัวแอปเดียว" } }
+]

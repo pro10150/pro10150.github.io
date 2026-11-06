@@ -25,3 +25,7 @@ yarn-debug.log*
 
 # Local planning docs (not for a public repo)
 upgrade-plan.md
+
+# Build output
+/dist
+/dist-ssr
