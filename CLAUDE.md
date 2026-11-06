@@ -5,44 +5,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm start                                  # dev server on http://localhost:3000
-npm run build                              # production build to build/
-npm test                                   # interactive watch mode
-CI=true npm test                           # single non-watch run
-CI=true npm test -- --testPathPattern=App  # run one test file
-npm run deploy                             # predeploy runs build, then gh-pages -d build
+npm run dev       # Vite dev server, http://localhost:5173 (Thai page at /th/)
+npm run check     # validate src/data/*.json (parse + every {en,th} pair complete)
+npm run build     # client build + SSR build + prerender into dist/
+npm run preview   # serve dist/
+npm run deploy    # manual publish: check, build, gh-pages -d dist
 ```
 
-Create React App (`react-scripts` 5). No lint script — ESLint runs through `react-scripts` via the `eslintConfig` field in `package.json`.
+Deploys normally happen in GitHub Actions (`.github/workflows/deploy.yml`): every push to `main` runs check + build and publishes `dist/` to the `gh-pages` branch. PRs run check + build only.
 
-Deploy target is `https://github.com/pro10150/pro10150.github.io`, a GitHub *user* page fronted by the custom domain `www.noppakunanantakitthawon.com` (apex 301s to www; cert covers both). `homepage` in `package.json` is set to `https://www.noppakunanantakitthawon.com` and `public/CNAME` holds the same host — CRA copies `public/` into every build, so `public/CNAME` **must** survive each `gh-pages -d build` publish or the custom domain drops (this has happened before: `gh-pages` branch history shows a publish deleting `CNAME`, manually restored two commits later).
+Deploy target is the `gh-pages` branch of `pro10150/pro10150.github.io`, a GitHub *user* page behind `www.noppakunanantakitthawon.com`. `public/CNAME` is copied into every build and the workflow also passes `cname:`; **the CNAME must survive every publish** or the custom domain drops (this has happened before).
 
 ## Architecture
 
-Single-page app, no router. `src/index.js` → `src/App.js` renders only `<NavigationBar />` inside `NextUIProvider`. (`App.js` also imports `Home` without using it — `Home` is rendered by `NavigationBar`.)
+React 18 + Vite 6, two HTML entry points (`index.html` = English, `th/index.html` = Thai). Language comes from `<html lang>`; there is no router. The nav's language button is a plain link between `/` and `/th/`.
 
-Content flows through three layers:
+- `vite.config.js` — `seo-head` plugin fills `<!--head:en-->` / `<!--head:th-->` with title, description, canonical, hreflang, Open Graph and Person JSON-LD, all read from `src/data/site.json`. It also inlines the theme-restore script (localStorage `por-theme`).
+- `scripts/prerender.mjs` — after the SSR build of `src/entry-server.jsx`, renders `<App lang>` to a string and replaces `<!--app-->` in `dist/index.html` and `dist/th/index.html`. `src/main.jsx` hydrates when markup is present.
+- `src/App.jsx` — every section (Nav, Hero, Stats, Work, Side, Story, About, Education, Contact). `src/components/Card.jsx` renders both project grids; `SectionHead.jsx` renders chapter label + heading + subtitle.
+- `src/i18n.jsx` — `pick(value, lang)` resolves a JSON value that is either a string or `{en, th}`; `<Rich>` supports `**bold**`, `==highlight==` and `\n` inside JSON text; `<T v>` is the plain version.
+- `src/styles.css` — all styling. Theme via `html[data-theme=dark|light]` CSS variables; Thai tweaks via `html[lang=th]`.
 
-1. **`src/models/*Model.js`** — static arrays of plain objects. This is the only content source; there is no database or API despite `mongoose`/`axios` being in `package.json`.
-2. **`src/components/List/<X>.js`** — renders one array element; receives that element's fields spread as props.
-3. **`src/components/<Section>.js`** — pairs a model with its row component via `ListTemplate`.
-
-`src/components/List/ListTemplate.js` is the generic renderer that ties them together:
-
-```jsx
-<ListTemplate component={ExperienceWork} data={ExperienceWorkModel} sectionTitle="Work Experience" />
-```
-
-It maps `data` and does `<Component {...dataItem} />`. A section may use several `ListTemplate`s (see `Experience.js`).
-
-**Updating portfolio content (jobs, courses, schools, projects) means editing a model file only** — no component change required, as long as the field names match what the row component destructures.
-
-`src/components/NavigationBar.js` owns both the nav and the page body: it lists every `<section id="...">` and the `react-scroll` `<Link to="...">` that scrolls to it. A new section requires an entry in both lists in that one file, and the `to` value must match the `id`.
+**Content lives only in `src/data/*.json`.** Adding a job, project, cert or skill should never need a component change. If a new field is needed, add it to the component *and* document it in README.md's "Updating the site" table.
 
 ## Conventions and gotchas
 
-- **Model exports are inconsistent.** All models use a named export (`export const XModel = [...]`) except `ExperiencePastProjectModel.js`, which has both a named *and* a default export — and `Experience.js` imports it as the default. Follow the named-export pattern for new models.
-- **Styling is 390 lines of global CSS classes in `src/App.css`** (`section-detail`, `detail-body`, `name-body`, `year-header`, `hStackContainer`, …). `tailwindcss` is a devDependency, but its config sits at `src/config/tailwind.config.js` rather than the repo root and no CSS file contains `@tailwind` directives, so Tailwind is not part of the build. Bootstrap CSS is imported globally in `App.js`.
-- **UI libraries are barely used.** NextUI provides only the top-level provider; `@mui/material` is used in exactly one place (`Chip` in `List/ExperiencePastProject.js`). `framer-motion` and `@fontsource/inter` have no imports in `src/`.
-- **`src/App.test.js` is the untouched CRA default** asserting `/learn react/i`, while `App.js` renders only `NavigationBar`, which contains no such text.
-- **Shared helpers** (prefer these over reimplementing): `src/utils/Date.js` — `calculateDateDifference(start, end)` returning `{years, months}`; `src/utils/Github.js` — `getRepoNameFromUrl(url)` returning `{username, repoName}` or `null`. Date formatting uses `date-fns` `format`. Row components handle an absent `endDate` as "ongoing" (see `List/ExperienceWork.js`).
+- Every user-facing string goes in JSON with both `en` and `th`, unless it's identical in both (tech names, company names). `npm run check` fails on a half-filled pair.
+- Thai copy voice: a capable dev who's fun to talk to, not formal; English tech words (scope, pitch, commit, CI, branch) are fine. Write it fresh, don't translate word for word. Por = ปอ.
+- Coral (`.card.jernie`) is reserved for the Jernie card. Palette otherwise: navy #2B3467, sky #BAD7E9, cream #FCFFE7, pink #EB455F, highlight #FFE14D.
+- Selectors for chips/tags use `>` (`.tags>span`, `.roles>span`) on purpose; nested spans from `<Rich>` must not pick up chip styles.
+- Design reference (approved Nov 2026): Claude artifact "Por — Portfolio Design Reference".

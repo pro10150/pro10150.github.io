@@ -1,0 +1,58 @@
+[
+  {
+    "emoji": "🚀",
+    "theme": "jernie",
+    "featured": true,
+    "title": "Jernie",
+    "role": { "en": "Solo developer · 2024 – now", "th": "ทำคนเดียว · 2024 – ปัจจุบัน" },
+    "when": "jernie.app",
+    "description": {
+      "en": "Social trip planner, so ==the plan survives the group chat.== Shared itineraries, budgets and bill splitting with slip confirmation.",
+      "th": "แอปวางแผนทริปกับเพื่อน ให้==แผนรอดจากแชทกลุ่ม== แชร์แผนเที่ยว งบ และหารบิลพร้อมยืนยันด้วยสลิป"
+    },
+    "bullets": [
+      { "en": "Native SwiftUI on iOS 26 (Liquid Glass), Firebase backend with App Check", "th": "SwiftUI แท้บน iOS 26 (Liquid Glass) แบ็กเอนด์ Firebase พร้อม App Check" },
+      { "en": "DEV / SIT / UAT / PROD, Xcode Cloud + fastlane, 1,000+ unit tests", "th": "DEV / SIT / UAT / PROD, Xcode Cloud + fastlane, ยูนิตเทสต์ 1,000+ ตัว" },
+      { "en": "Handled App Store compliance: age gate, legal acceptance, privacy labels", "th": "จัดการเงื่อนไข App Store เอง: จำกัดอายุ ระบบให้ผู้ใช้ยอมรับข้อตกลง privacy label" }
+    ],
+    "tags": ["SwiftUI", "Firebase", "Cloud Functions", "Xcode Cloud"],
+    "status": { "type": "pending", "label": { "en": "📮 Submitted to App Store · Nov 2026", "th": "📮 ส่งขึ้น App Store แล้ว · พ.ย. 2026" } },
+    "link": { "label": "jernie.app ↗", "url": "https://jernie.app" }
+  },
+  {
+    "emoji": "🌸",
+    "title": "Orchid",
+    "role": { "en": "Multi-agent dev system", "th": "ระบบพัฒนาซอฟต์แวร์แบบหลายเอเจนต์" },
+    "when": { "en": "Aug 2026 – now", "th": "ส.ค. 2026 – ปัจจุบัน" },
+    "description": {
+      "en": "Orchestrates Claude Code and Codex agents like a dev team: orchestrator, coordinators, specialists. Its convention plugin caught 21/21 planted violations on a 319-file Swift app.",
+      "th": "คุมเอเจนต์ Claude Code และ Codex ให้ทำงานเป็นทีม มีทั้ง orchestrator, coordinator และ specialist ปลั๊กอินคุมคอนเวนชันจับจุดผิดที่ฝังไว้ได้ 21/21 บนแอป Swift 319 ไฟล์"
+    },
+    "tags": ["Claude Code", "SQLite", "SwiftUI macOS"],
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+  },
+  {
+    "emoji": "🧾",
+    "title": "Lognie",
+    "role": { "en": "Privacy-first finance", "th": "แอปการเงินที่เน้นความเป็นส่วนตัว" },
+    "when": { "en": "Aug 2026 – now", "th": "ส.ค. 2026 – ปัจจุบัน" },
+    "description": {
+      "en": "Scans Thai bank e-slips fully on-device: QR verification plus dual-pass OCR. Benchmarked on 2,656 real slips. No backend, no peeking.",
+      "th": "สแกนสลิปโอนเงินธนาคารไทยบนเครื่องทั้งหมด ตรวจ QR และ OCR สองรอบ ทดสอบกับสลิปจริง 2,656 ใบ ไม่มีแบ็กเอนด์ ไม่มีใครแอบดู"
+    },
+    "tags": ["SwiftUI", "SwiftData", "Vision"],
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+  },
+  {
+    "emoji": "📓",
+    "title": "Jotnie",
+    "role": { "en": "Conversational journal", "th": "ไดอารี่แบบแชท" },
+    "when": { "en": "Sep 2026 – now", "th": "ก.ย. 2026 – ปัจจุบัน" },
+    "description": {
+      "en": "A journal you talk to instead of type into, powered by on-device Apple Foundation Models. Mood tags drive the visuals.",
+      "th": "ไดอารี่ที่คุยด้วยแทนการนั่งพิมพ์ ขับเคลื่อนด้วย Apple Foundation Models บนเครื่อง แท็กอารมณ์แล้วภาพเปลี่ยนตาม"
+    },
+    "tags": ["SwiftUI", "Foundation Models"],
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+  }
+]

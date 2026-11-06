@@ -1,0 +1,65 @@
+[
+  {
+    "emoji": "📈",
+    "title": { "en": "Securities Trading App", "th": "แอปเทรดหลักทรัพย์" },
+    "role": { "en": "Flutter · Portfolio & Reports owner", "th": "Flutter · เจ้าของโมดูล Portfolio และ Reports" },
+    "when": { "en": "Thai brokerage · Aug 2025 – Aug 2026", "th": "โบรกเกอร์ไทย · ส.ค. 2025 – ส.ค. 2026" },
+    "description": {
+      "en": "Owned positions across cash, Thai & global bonds, equity and funds, plus tax, rights and monthly-statement reports. Led the iPad split view, aka the branch that never sleeps.",
+      "th": "รับผิดชอบส่วน Portfolio ทั้งเงินสด ตราสารหนี้ไทยและต่างประเทศ หุ้น และกองทุน รวมถึงรายงานภาษี สิทธิ และ statement รายเดือน ยังเป็นคนหลักในการพัฒนา iPad split view — branch ที่แทบไม่เคยได้พัก"
+    },
+    "tags": ["Flutter", "Dart", "iPad", { "en": "8 devs", "th": "ทีม dev 8 คน" }],
+    "status": { "type": "pending", "label": { "en": "🔒 Unreleased · client NDA", "th": "🔒 ยังไม่เปิดตัว · ภายใต้ NDA" } }
+  },
+  {
+    "emoji": "🛒",
+    "title": "Rimping",
+    "role": { "en": "Primary iOS Developer", "th": "iOS Developer หลัก" },
+    "when": { "en": "Chiang Mai retail · May 2024 – May 2026", "th": "รีเทลเชียงใหม่ · พ.ค. 2024 – พ.ค. 2026" },
+    "description": {
+      "en": "Supermarket + SuperPlus loyalty app. Wrote ~85% of the iOS commits (auth, home, rewards, membership) and drove every release, dev → UAT → prod.",
+      "th": "แอปซูเปอร์มาร์เก็ตและสมาชิก SuperPlus มีส่วนร่วมประมาณ 85% ของ commit ฝั่ง iOS (ล็อกอิน หน้าหลัก รีวอร์ด สมาชิก) และคุมทุกรอบปล่อย dev → UAT → prod"
+    },
+    "tags": ["Swift", "SwiftUI", "KMP", "TestFlight"],
+    "status": { "type": "live", "label": { "en": "✅ Live on App Store", "th": "✅ อยู่บน App Store แล้ว" } },
+    "link": { "label": { "en": "View ↗", "th": "ดู ↗" }, "url": "https://apps.apple.com/th/app/rimping/id6738688550" }
+  },
+  {
+    "emoji": "🏦",
+    "title": "KKP BIZ",
+    "role": "iOS Developer",
+    "when": { "en": "Kiatnakin Phatra Bank · Aug 2022 – Jul 2025", "th": "ธนาคารเกียรตินาคินภัทร · ส.ค. 2022 – ก.ค. 2025" },
+    "description": {
+      "en": "Corporate banking. Built Login, Home, Account and Banking on a shared KMP layer, and integrated Promon Shield runtime protection. Started as an intern, stayed for 3 years.",
+      "th": "แอปธนาคารสำหรับลูกค้าองค์กร สร้างโมดูล Login, Home, Account และ Banking บน KMP layer ที่แชร์กัน พร้อมติดตั้ง Promon Shield เริ่มจากเด็กฝึกงาน แล้วอยู่ยาว 3 ปี"
+    },
+    "tags": ["Swift", "UIKit", "KMP", "Promon"],
+    "status": { "type": "live", "label": { "en": "✅ Live on App Store", "th": "✅ อยู่บน App Store แล้ว" } },
+    "link": { "label": { "en": "View ↗", "th": "ดู ↗" }, "url": "https://apps.apple.com/us/app/kkp-biz/id1665856562" }
+  },
+  {
+    "emoji": "🧯",
+    "title": "WISET",
+    "role": "Flutter Developer",
+    "when": { "en": "SET investment app · Feb – May 2026", "th": "แอปลงทุนของ SET · ก.พ. – พ.ค. 2026" },
+    "description": {
+      "en": "Parachuted in to stabilize before launch: closed 45 defect tickets and replaced scattered checks with one shared file-type validator.",
+      "th": "โดดร่มเข้ามาช่วยเคลียร์ก่อนเปิดตัว ปิด defect ไป 45 รายการ และยุบการเช็กประเภทไฟล์ที่กระจัดกระจายให้เหลือ validator ตัวเดียว"
+    },
+    "tags": ["Flutter", "Dart", { "en": "12 devs", "th": "ทีม dev 12 คน" }],
+    "status": { "type": "live", "label": { "en": "✅ Live on App Store", "th": "✅ อยู่บน App Store แล้ว" } },
+    "link": { "label": { "en": "View ↗", "th": "ดู ↗" }, "url": "https://apps.apple.com/th/app/wiset/id6756988677" }
+  },
+  {
+    "emoji": "🗂️",
+    "title": { "en": "Internal CRM", "th": "CRM ภายในองค์กร" },
+    "role": "Flutter Developer",
+    "when": { "en": "Internal release · May – Jun 2026", "th": "ใช้ภายใน · พ.ค. – มิ.ย. 2026" },
+    "description": {
+      "en": "Built profile, preferences and a reusable filter framework (multi-select, skeleton loading, active-filter count) used for deal filtering.",
+      "th": "สร้างหน้าโปรไฟล์ การตั้งค่า และ filter framework ที่ใช้ซ้ำได้ (multi-select, skeleton loading, นับฟิลเตอร์ที่เปิดอยู่) สำหรับกรองดีล"
+    },
+    "tags": ["Flutter", "REST", { "en": "4 devs", "th": "ทีม dev 4 คน" }],
+    "status": { "type": "dev", "label": { "en": "🏢 Internal", "th": "🏢 ใช้ภายใน" } }
+  }
+]

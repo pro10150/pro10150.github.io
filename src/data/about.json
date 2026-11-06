@@ -1,0 +1,23 @@
+{
+  "paragraphs": [
+    {
+      "en": "I'm **chill, creative and analytical**, usually in that order until a release is due. I like the parts of the job where the hard problem isn't the UI: data that has to reconcile, flows that have to survive real users, and requirements that need translating before anyone writes code.",
+      "th": "ผมเป็นคน**ชิล ครีเอทีฟ และช่างวิเคราะห์** เรียงตามลำดับนี้เลย จนกว่าจะถึงวันปล่อยแอป ชอบงานส่วนที่โจทย์ยากไม่ใช่ UI: ข้อมูลที่ต้องกระทบยอดให้ตรง โฟลว์ที่ต้องรอดจากผู้ใช้จริง และ requirement ที่ต้องแปลให้ชัดก่อนใครจะเริ่มเขียนโค้ด"
+    },
+    {
+      "en": "That last bit is why I'm also leaning into **technical business analysis**. I've scoped Jernie from zero, led a 5-person team as PM at uni, and pitched startup cases with teams across three countries. I speak both \"stakeholder\" and \"pull request\".",
+      "th": "ข้อสุดท้ายนี่แหละที่ทำให้ผมเริ่มจริงจังกับสาย **Technical BA** ด้วย ผมเคยวาง scope ของ Jernie ตั้งแต่ศูนย์ เป็น PM ดูแลทีม 5 คนสมัยเรียน และเคย pitch ไอเดียสตาร์ทอัปกับทีมจาก 3 ประเทศ พูดได้ทั้งภาษา stakeholder และภาษา pull request"
+    },
+    {
+      "en": "One day I'd like to do this abroad. Still working out the when.",
+      "th": "สักวันอยากไปทำงานนี้ที่ต่างประเทศ ส่วนเมื่อไหร่ ยังคิดอยู่"
+    }
+  ],
+  "inventory": [
+    { "label": { "en": "🎯 Roles", "th": "🎯 สายงาน" }, "value": "iOS / Flutter Dev · Technical BA" },
+    { "label": { "en": "💼 Freelance", "th": "💼 ฟรีแลนซ์" }, "value": { "en": "Open for projects", "th": "เปิดรับโปรเจกต์" } },
+    { "label": { "en": "🛠️ Main weapon", "th": "🛠️ อาวุธหลัก" }, "value": "Swift · Flutter" },
+    { "label": { "en": "🗣️ Languages", "th": "🗣️ ภาษา" }, "value": { "en": "Thai (native) · English (TOEIC 950)", "th": "ไทย (ภาษาแม่) · อังกฤษ (TOEIC 950)" } },
+    { "label": { "en": "📍 Base", "th": "📍 ประจำการ" }, "value": { "en": "Bangkok, Thailand (GMT+7)", "th": "กรุงเทพฯ ประเทศไทย (GMT+7)" } }
+  ]
+}

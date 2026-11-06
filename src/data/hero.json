@@ -1,0 +1,19 @@
+{
+  "chapter": { "en": "Chapter 01 — The dev", "th": "บทที่ 01 — นักพัฒนา" },
+  "greeting": { "en": "Hi, I'm Por.", "th": "สวัสดีครับ ปอเอง" },
+  "tagline": { "en": "I ship apps.", "th": "ทำแอปขึ้นสโตร์" },
+  "lede": {
+    "en": "iOS & Flutter developer from Bangkok. 3+ years on **banking, securities, investment & retail** apps people actually open. Lately: on-device AI that reads bank slips, and a crew of Claude agents I'm teaching to behave. Chill on the outside, test suite on the inside.",
+    "th": "นักพัฒนา iOS & Flutter จากกรุงเทพฯ ประสบการณ์ 3 ปีกว่ากับแอป**ธนาคาร หลักทรัพย์ การลงทุน และรีเทล**ที่คนใช้จริง ช่วงนี้กำลังสอน AI บนเครื่องให้อ่านสลิปโอนเงิน และฝึกทีมเอเจนต์ Claude ให้ทำตัวดีๆ ข้างนอกดูชิล ข้างในมี test suite คุมเข้ม"
+  },
+  "roles": [
+    { "label": "📱 iOS / Flutter Developer" },
+    { "label": "🧩 Technical BA" },
+    { "label": { "en": "● Open to work", "th": "● พร้อมรับงานประจำ" }, "style": "open" },
+    { "label": { "en": "💼 Taking freelance gigs", "th": "💼 รับงานฟรีแลนซ์" }, "style": "free" }
+  ],
+  "freelanceNote": {
+    "en": "Need an iOS / Flutter app built, rescued, or scoped? I take freelance projects too.",
+    "th": "อยากได้แอป iOS / Flutter ทำใหม่ กู้ชีพ หรือช่วยวาง scope? รับงานฟรีแลนซ์ด้วยนะ"
+  }
+}

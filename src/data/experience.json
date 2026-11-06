@@ -1,0 +1,25 @@
+[
+  {
+    "title": "iOS & Flutter Developer",
+    "company": "ClickNext Co., Ltd.",
+    "meta": { "en": "Bangkok · Jul 2023 – Oct 2026 · 3 yrs 4 mos", "th": "กรุงเทพฯ · ก.ค. 2023 – ต.ค. 2026 · 3 ปี 4 เดือน" },
+    "projects": [
+      { "when": { "en": "Aug 2025 – Aug 2026", "th": "ส.ค. 2025 – ส.ค. 2026" }, "name": "Securities Trading App", "note": { "en": "Portfolio & Reports owner, iPad split view", "th": "เจ้าของ Portfolio และ Reports, iPad split view" } },
+      { "when": { "en": "May 2024 – May 2026", "th": "พ.ค. 2024 – พ.ค. 2026" }, "name": "Rimping", "note": { "en": "Primary iOS dev, release owner", "th": "iOS dev หลัก คุมการปล่อยแอป" } },
+      { "when": { "en": "Aug 2022 – Jul 2025", "th": "ส.ค. 2022 – ก.ค. 2025" }, "name": "KKP BIZ", "note": "Login, Home, Account, Banking" },
+      { "when": { "en": "Feb – May 2026", "th": "ก.พ. – พ.ค. 2026" }, "name": "WISET", "note": { "en": "Pre-launch stabilization", "th": "เคลียร์บั๊กก่อนเปิดตัว" } },
+      { "when": { "en": "May – Jun 2026", "th": "พ.ค. – มิ.ย. 2026" }, "name": { "en": "Internal CRM", "th": "CRM ภายใน" }, "note": { "en": "Filter framework, settings", "th": "Filter framework และหน้าตั้งค่า" } }
+    ]
+  },
+  {
+    "title": "iOS Developer (Intern)",
+    "company": "ClickNext Co., Ltd.",
+    "meta": { "en": "Jun – Oct 2022", "th": "มิ.ย. – ต.ค. 2022" },
+    "past": true,
+    "projects": [
+      { "name": "Zoo Thailand", "note": { "en": "UIKit + Storyboard screens for a new app", "th": "หน้าจอ UIKit + Storyboard สำหรับแอปใหม่" } },
+      { "name": { "en": "Wine label scanner", "th": "สแกนฉลากไวน์" }, "note": { "en": "Camera-to-OCR proof of concept", "th": "POC ถ่ายรูปฉลากแล้วส่งไป OCR" } },
+      { "name": "KKP BIZ", "note": { "en": "Joined the team, then stayed for years", "th": "เข้าทีมแล้วก็อยู่ต่ออีกยาว" } }
+    ]
+  }
+]

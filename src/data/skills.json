@@ -1,0 +1,8 @@
+[
+  { "group": { "en": "Languages", "th": "ภาษาโปรแกรม" }, "items": ["Swift", "Dart", "Kotlin", "Python", "SQL"] },
+  { "group": { "en": "Mobile", "th": "โมบาย" }, "items": ["SwiftUI", "UIKit", "Flutter", "KMP", "MVVM", "VIPER"] },
+  { "group": { "en": "Apple frameworks", "th": "เฟรมเวิร์ก Apple" }, "items": ["SwiftData", "Vision", "Foundation Models", "Keychain"] },
+  { "group": { "en": "Backend & cloud", "th": "แบ็กเอนด์และคลาวด์" }, "items": ["Firebase", "Cloud Functions", "App Check", "FastAPI", "Flask", "Docker"] },
+  { "group": { "en": "Testing & release", "th": "เทสต์และการปล่อยแอป" }, "items": ["Swift Testing", "TestFlight", "Xcode Cloud", "fastlane", "dev/SIT/UAT/prod"] },
+  { "group": { "en": "BA & delivery", "th": "BA และการส่งมอบ" }, "items": ["Requirements", { "en": "MVP scoping", "th": "วาง scope MVP" }, { "en": "User flows", "th": "ออกแบบ user flow" }, "SIT / UAT", { "en": "Claude Code agents", "th": "เอเจนต์ Claude Code" }] }
+]

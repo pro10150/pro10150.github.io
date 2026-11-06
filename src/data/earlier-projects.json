@@ -1,0 +1,6 @@
+[
+  { "name": "Hew'a", "repo": "pro10150/hew-a", "description": { "en": "Recipe social app. PM & lead dev of 5, ~60% of the Flutter code, plus a Flask recommender API.", "th": "แอปโซเชียลแชร์สูตรอาหาร เป็น PM และ lead dev ทีม 5 คน เขียนโค้ด Flutter ~60% พร้อม API แนะนำเมนูด้วย Flask" } },
+  { "name": "Muvi", "repo": "pro10150/muvi-backend", "description": { "en": "Senior project. Backend dev: FastAPI movie recommender with DistilBERT over 28k films.", "th": "โปรเจกต์จบ ทำแบ็กเอนด์ระบบแนะนำหนังด้วย FastAPI และ DistilBERT จากหนัง 28,000 เรื่อง" } },
+  { "name": "Parking System", "repo": "pro10150/parking-system", "description": { "en": "IoT slip-less parking prototype: React, Flask, Arduino.", "th": "ต้นแบบระบบจอดรถ IoT ไม่ต้องใช้บัตรกระดาษ: React, Flask, Arduino" } },
+  { "name": "Little Lemon", "repo": "pro10150/littlelemon", "description": { "en": "SwiftUI capstone from the Meta iOS certificate.", "th": "โปรเจกต์ปิดคอร์ส Meta iOS ด้วย SwiftUI" } }
+]

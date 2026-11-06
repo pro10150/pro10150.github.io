@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "work": { "en": "Work", "th": "งาน" },
+    "story": { "en": "Story", "th": "เส้นทาง" },
+    "about": { "en": "About", "th": "เกี่ยวกับ" },
+    "education": { "en": "Education", "th": "การศึกษา" },
+    "contact": { "en": "Contact", "th": "ติดต่อ" },
+    "switchLang": { "en": "ไทย", "th": "EN" },
+    "switchLangLabel": { "en": "อ่านเป็นภาษาไทย", "th": "Read in English" },
+    "themeLabel": { "en": "Toggle light and dark theme", "th": "สลับธีมสว่างและมืด" }
+  },
+  "buttons": {
+    "seeWork": { "en": "See the work ↓", "th": "ดูผลงาน ↓" },
+    "resume": { "en": "Résumé (PDF)", "th": "เรซูเม่ (PDF)" },
+    "hire": { "en": "Hire me freelance ↗", "th": "จ้างฟรีแลนซ์ ↗" },
+    "email": { "en": "Email me", "th": "ส่งอีเมล" }
+  },
+  "sections": {
+    "work": {
+      "chapter": { "en": "Chapter 02 — Main quests", "th": "บทที่ 02 — เควสต์หลัก" },
+      "title": { "en": "Stuff I shipped ==(and still shipping)==", "th": "งานที่ปล่อยแล้ว ==(และยังลุยต่อ)==" },
+      "subtitle": { "en": "Client work from ClickNext. Real users, real money, real release-day stress.", "th": "งานลูกค้าจาก ClickNext ผู้ใช้จริง เงินจริง ความเครียดวันปล่อยแอปก็ของจริง" }
+    },
+    "side": {
+      "chapter": { "en": "Chapter 03 — Side quests", "th": "บทที่ 03 — เควสต์รอง" },
+      "title": { "en": "Things I build ==after hours==", "th": "ของที่ทำ==หลังเลิกงาน==" },
+      "subtitle": { "en": "Solo. No PM, no BA, no one to blame. Except me, of course.", "th": "ทำคนเดียว ไม่มี PM ไม่มี BA ไม่มีใครให้โทษ นอกจากตัวเอง" }
+    },
+    "story": {
+      "chapter": { "en": "Chapter 04 — The story so far", "th": "บทที่ 04 — เรื่องราวที่ผ่านมา" },
+      "title": { "en": "Where I've been ==paid to code==", "th": "เขียนโค้ดแลกเงิน==ที่ไหนมาบ้าง==" }
+    },
+    "about": {
+      "chapter": { "en": "Chapter 05 — Character select", "th": "บทที่ 05 — เลือกตัวละคร" },
+      "title": { "en": "Everything ==about me==", "th": "ทุกอย่าง==เกี่ยวกับผม==" },
+      "inventory": { "en": "Inventory", "th": "คลังไอเทม" }
+    },
+    "education": {
+      "chapter": { "en": "Chapter 06 — Training arc", "th": "บทที่ 06 — ภาคฝึกวิชา" },
+      "title": { "en": "School, ==but make it count==", "th": "เรียนแล้ว==ต้องได้ของ==" },
+      "earlier": { "en": "Earlier & school projects", "th": "โปรเจกต์ช่วงเรียน" }
+    },
+    "contact": {
+      "chapter": { "en": "Final chapter — Your move", "th": "บทสุดท้าย — ตาคุณแล้ว" },
+      "title": { "en": "Got an app, a team, ==or a plot twist?==", "th": "มีแอป มีทีม ==หรือมีพล็อตทวิสต์?==" },
+      "subtitle": { "en": "Open to iOS / Flutter and technical BA roles, in Bangkok or abroad, plus freelance projects. Replies faster than my CI.", "th": "พร้อมรับงาน iOS / Flutter และ Technical BA ทั้งในกรุงเทพฯ และต่างประเทศ รวมถึงงานฟรีแลนซ์ ตอบเร็วกว่า CI ของผมอีก" },
+      "tbc": "To be continued →"
+    }
+  },
+  "footer": { "en": "Directed, written & debugged by Por.\nBugs also by Por. 🐛", "th": "กำกับ เขียนบท และดีบักโดยปอ\nบั๊กก็โดยปอเหมือนกัน 🐛" }
+}
