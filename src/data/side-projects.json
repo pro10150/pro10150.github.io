@@ -16,20 +16,24 @@
       { "en": "Handled App Store compliance: age gate, legal acceptance, privacy labels", "th": "จัดการเงื่อนไข App Store เอง: จำกัดอายุ ระบบให้ผู้ใช้ยอมรับข้อตกลง privacy label" }
     ],
     "tags": ["SwiftUI", "Firebase", "Cloud Functions", "Xcode Cloud"],
-    "status": { "type": "pending", "label": { "en": "📮 Submitted to App Store · Nov 2026", "th": "📮 ส่งขึ้น App Store แล้ว · พ.ย. 2026" } },
+    "status": { "type": "pending", "label": { "en": "🎉 Approved · launching 30 Nov 2026", "th": "🎉 ผ่านรีวิวแล้ว · เปิดตัว 30 พ.ย. 2026" } },
     "link": { "label": "jernie.app ↗", "url": "https://jernie.app" }
   },
   {
     "emoji": "🌸",
     "title": "Orchid",
-    "role": { "en": "Multi-agent dev system", "th": "ระบบพัฒนาซอฟต์แวร์แบบหลายเอเจนต์" },
+    "role": { "en": "Self-hosted AI-first project management", "th": "ระบบจัดการโปรเจกต์ AI-first แบบ self-host" },
     "when": { "en": "Aug 2026 – now", "th": "ส.ค. 2026 – ปัจจุบัน" },
     "description": {
-      "en": "Orchestrates Claude Code and Codex agents like a dev team: orchestrator, coordinators, specialists. Its convention plugin caught 21/21 planted violations on a 319-file Swift app.",
-      "th": "คุมเอเจนต์ Claude Code และ Codex ให้ทำงานเป็นทีม มีทั้ง orchestrator, coordinator และ specialist ปลั๊กอินคุมคอนเวนชันจับจุดผิดที่ฝังไว้ได้ 21/21 บนแอป Swift 319 ไฟล์"
+      "en": "A task board where AI agents are teammates: GitHub issues as Phase → Feature → Task, an MCP server for agents to claim work and propose changes, and a human approve code on every change. Its convention plugin found ==20/20 planted violations with 0 false positives== on a holdout repo, and when agents were asked to break 12 rules, they shipped 0.",
+      "th": "บอร์ดงานที่ AI agent เป็นเพื่อนร่วมทีม แตกงานจาก GitHub issue เป็น Phase → Feature → Task มี MCP server ให้ agent จองงานและเสนอแก้ แต่ต้องมีคนกด approve ทุกครั้ง ปลั๊กอินคุม convention จับจุดผิดที่ฝังไว้ได้ ==20/20 ไม่มี false positive== บน repo ทดสอบ แล้วพอสั่งให้ agent แหกกฎ 12 ข้อ ผลออกมาไม่ผิดสักข้อ"
     },
-    "tags": ["Claude Code", "SQLite", "SwiftUI macOS"],
-    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+    "tags": ["TypeScript", "SQLite", "MCP", "Claude Code"],
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } },
+    "links": [
+      { "label": "orchid-board ↗", "url": "https://github.com/jernie-apps/orchid-board" },
+      { "label": "orchid-convention ↗", "url": "https://github.com/jernie-apps/orchid-convention" }
+    ]
   },
   {
     "emoji": "🧾",
