@@ -45,7 +45,7 @@ All content lives in **`src/data/`**. Edit a JSON file, push to `main`, and GitH
 
 Add `"past": true` to older jobs to give their dot the light-blue color.
 
-**New project card** — copy any object in `work.json` or `side-projects.json`. Optional fields: `emoji`, `bullets`, `link`, `featured: true` (2 columns wide), `theme: "jernie"` (coral card).
+**New project card** — copy any object in `work.json` or `side-projects.json`. Optional fields: `emoji`, `bullets`, `link` (or `links: [{label, url}, …]` for several), `featured: true` (2 columns wide), `theme: "jernie"` (coral card).
 
 Status badge `type`: `live` (green), `pending` (yellow), `dev` (blue).
 

@@ -5,6 +5,7 @@ export default function Card({ item }) {
   const classes = ['card'];
   if (item.theme) classes.push(item.theme);
   if (item.featured) classes.push('feature');
+  const links = item.links || (item.link ? [item.link] : []);
   return (
     <article className={classes.join(' ')}>
       {item.emoji && <div className="sticker" aria-hidden="true">{item.emoji}</div>}
@@ -18,12 +19,12 @@ export default function Card({ item }) {
       {item.tags && (
         <div className="tags">{item.tags.map((t, i) => <span key={i}>{pick(t, lang)}</span>)}</div>
       )}
-      {(item.status || item.link) && (
+      {(item.status || links.length > 0) && (
         <div className="foot">
           {item.status && <span className={`badge ${item.status.type || ''}`}><T v={item.status.label} /></span>}
-          {item.link && (
-            <a className="more" href={item.link.url} target="_blank" rel="noopener noreferrer"><T v={item.link.label} /></a>
-          )}
+          {links.map((l, i) => (
+            <a key={i} className="more" href={l.url} target="_blank" rel="noopener noreferrer"><T v={l.label} /></a>
+          ))}
         </div>
       )}
     </article>

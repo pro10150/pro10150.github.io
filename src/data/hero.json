@@ -3,8 +3,8 @@
   "greeting": { "en": "Hi, I'm Por.", "th": "สวัสดีครับ ปอเอง" },
   "tagline": { "en": "I ship apps.", "th": "ทำแอปขึ้นสโตร์" },
   "lede": {
-    "en": "iOS & Flutter developer from Bangkok. 3+ years on **banking, securities, investment & retail** apps people actually open. Lately: on-device AI that reads bank slips, and a crew of Claude agents I'm teaching to behave. Chill on the outside, test suite on the inside.",
-    "th": "นักพัฒนา iOS & Flutter จากกรุงเทพฯ ประสบการณ์ 3 ปีกว่ากับแอป**ธนาคาร หลักทรัพย์ การลงทุน และรีเทล**ที่คนใช้จริง ช่วงนี้กำลังสอน AI บนเครื่องให้อ่านสลิปโอนเงิน และฝึกทีมเอเจนต์ Claude ให้ทำตัวดีๆ ข้างนอกดูชิล ข้างในมี test suite คุมเข้ม"
+    "en": "iOS & Flutter developer from Bangkok. 3+ years on **banking, securities, investment & retail** apps people actually open. Lately: on-device AI that reads bank slips, and a project board where AI agents are teammates (a human still holds the approve button). Chill on the outside, test suite on the inside.",
+    "th": "นักพัฒนา iOS & Flutter จากกรุงเทพฯ ประสบการณ์ 3 ปีกว่ากับแอป**ธนาคาร หลักทรัพย์ การลงทุน และรีเทล**ที่คนใช้จริง ช่วงนี้กำลังสอน AI บนเครื่องให้อ่านสลิปโอนเงิน และทำบอร์ดงานที่ให้ AI agent เป็นเพื่อนร่วมทีม (แต่ปุ่ม approve ยังอยู่ที่คน) ข้างนอกดูชิล ข้างในมี test suite คุมเข้ม"
   },
   "roles": [
     { "label": "📱 iOS / Flutter Developer" },

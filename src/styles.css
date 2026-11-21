@@ -71,7 +71,7 @@ h2{font-size:clamp(34px,5vw,48px);font-weight:900;letter-spacing:-.02em;margin-t
 .card.jernie h3,.card.jernie p,.card.jernie ul{color:#1A1010}
 .card.jernie .role{color:#fff}.card.jernie .when{color:#3A1A12}
 .card.jernie .tags>span{background:rgba(255,255,255,.8);color:#1A1010}
-.card.jernie .mark,.card .mark{background:var(--hl);padding:0 5px;border-radius:4px;font-weight:800}
+.card.jernie .mark,.card .mark{background:var(--hl);padding:0 5px;border-radius:4px;font-weight:800;color:#1A1F45}
 .card.jernie .more{color:#1A1010}
 .feature{grid-column:span 2}
 
