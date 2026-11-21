@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { LangContext, Rich, T, pick } from './i18n';
 import Card from './components/Card';
 import ProjectDialog from './components/ProjectDialog';
+import { cardFor, turnCard } from './flip';
 import SectionHead from './components/SectionHead';
 
 import site from './data/site.json';
@@ -42,29 +43,41 @@ function ThemeToggle({ lang }) {
 const slugOf = (item) => pick(item.title, 'en').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 function SideGrid() {
   const [open, setOpen] = useState(null);
+  const [flipFrom, setFlipFrom] = useState(null);
   const pushed = useRef(false);
+  const hidden = useRef(null);
+  const reveal = () => { if (hidden.current) { hidden.current.style.visibility = ''; hidden.current = null; } };
   useEffect(() => {
     const sync = () => {
       const m = window.location.hash.match(/^#side\/(.+)$/);
       const hit = m && sideProjects.find((p) => p.details && slugOf(p) === m[1]);
       setOpen(hit ? slugOf(hit) : null);
-      if (!hit) pushed.current = false;
+      if (!hit) { pushed.current = false; setFlipFrom(null); reveal(); }
     };
     sync();
     window.addEventListener('hashchange', sync);
     return () => window.removeEventListener('hashchange', sync);
   }, []);
-  const show = (item) => {
-    window.history.pushState(null, '', `#side/${slugOf(item)}`);
+  const show = async (item) => {
+    const slug = slugOf(item);
+    const card = cardFor(slug);
+    await turnCard(card);
+    if (card) { card.style.visibility = 'hidden'; hidden.current = card; }
+    window.history.pushState(null, '', `#side/${slug}`);
     pushed.current = true;
-    setOpen(slugOf(item));
+    setFlipFrom(card || null);
+    setOpen(slug);
   };
   const close = () => {
     const slug = open;
+    const card = hidden.current;
     setOpen(null);
+    setFlipFrom(null);
+    reveal();
     if (pushed.current) { pushed.current = false; window.history.back(); }
     else window.history.replaceState(null, '', '#side');
-    requestAnimationFrame(() => document.querySelector(`button[data-slug="${slug}"]`)?.focus());
+    turnCard(card, true);
+    requestAnimationFrame(() => document.querySelector(`button[data-slug="${slug}"]`)?.focus({ preventScroll: true }));
   };
   const current = sideProjects.find((p) => slugOf(p) === open);
   return (
@@ -74,7 +87,7 @@ function SideGrid() {
           <Card key={i} item={item} slug={slugOf(item)} onOpen={() => show(item)} />
         ))}
       </div>
-      {current && <ProjectDialog item={current} onClose={close} />}
+      {current && <ProjectDialog item={current} from={flipFrom} onClose={close} />}
     </>
   );
 }

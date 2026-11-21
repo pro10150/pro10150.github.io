@@ -211,3 +211,7 @@ html.modal-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.pd{animation:none}}
 .pd-body:focus{outline:none}
 html[lang=th] .pd h4{letter-spacing:.5px;font-size:13px}
+.pd.flip{animation:none;backface-visibility:hidden;will-change:transform}
+.pd.flip::backdrop{animation:pd-fade .3s ease-out}
+.pd.leaving::backdrop{opacity:0;transition:opacity .2s}
+@keyframes pd-fade{from{opacity:0}to{opacity:1}}
