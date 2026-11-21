@@ -6,57 +6,111 @@
     "title": "Jernie",
     "role": { "en": "Solo developer · 2024 – now", "th": "ทำคนเดียว · 2024 – ปัจจุบัน" },
     "when": "jernie.app",
-    "description": {
-      "en": "Social trip planner, so ==the plan survives the group chat.== Shared itineraries, budgets and bill splitting with slip confirmation.",
-      "th": "แอปวางแผนทริปกับเพื่อน ให้==แผนรอดจากแชทกลุ่ม== แชร์แผนเที่ยว งบ และหารบิลพร้อมยืนยันด้วยสลิป"
-    },
+    "description": { "en": "Social trip planner, so ==the plan survives the group chat.== Shared itineraries, budgets and bill splitting with slip confirmation.", "th": "แอปวางแผนทริปกับเพื่อน ให้==แผนรอดจากแชทกลุ่ม== แชร์แผนเที่ยว งบ และหารบิลพร้อมยืนยันด้วยสลิป" },
     "bullets": [
       { "en": "Native SwiftUI on iOS 26 (Liquid Glass), Firebase backend with App Check", "th": "SwiftUI แท้บน iOS 26 (Liquid Glass) แบ็กเอนด์ Firebase พร้อม App Check" },
       { "en": "DEV / SIT / UAT / PROD, Xcode Cloud + fastlane, 1,000+ unit tests", "th": "DEV / SIT / UAT / PROD, Xcode Cloud + fastlane, ยูนิตเทสต์ 1,000+ ตัว" },
       { "en": "Handled App Store compliance: age gate, legal acceptance, privacy labels", "th": "จัดการเงื่อนไข App Store เอง: จำกัดอายุ ระบบให้ผู้ใช้ยอมรับข้อตกลง privacy label" }
     ],
     "tags": ["SwiftUI", "Firebase", "Cloud Functions", "Xcode Cloud"],
-    "status": { "type": "pending", "label": { "en": "🎉 Approved · launching 30 Nov 2026", "th": "🎉 ผ่านรีวิวแล้ว · เปิดตัว 30 พ.ย. 2026" } },
-    "link": { "label": "jernie.app ↗", "url": "https://jernie.app" }
+    "status": { "type": "pending", "label": { "en": "🎉 Approved · launching 30 Nov 2026", "th": "🎉 ผ่านรีวิวแล้ว · เปิดตัว 30 พ.ย. 2026" }},
+    "link": { "label": "jernie.app ↗", "url": "https://jernie.app" },
+    "details": {
+      "what": [
+        { "en": "A trip planner for friend groups, built because ==plans die in the group chat.== One shared itinerary, one shared budget, and bill splitting where friends confirm with their transfer slip, so nobody has to chase anyone.", "th": "แอปวางแผนทริปสำหรับแก๊งเพื่อน เกิดขึ้นเพราะ==แผนเที่ยวชอบตายในแชทกลุ่ม== มีแผนเที่ยวเดียวที่ทุกคนเห็นตรงกัน งบก้อนเดียว และหารบิลแบบแนบสลิปยืนยัน ไม่ต้องมีใครคอยทวงใคร" },
+        { "en": "Native SwiftUI on iOS 26 with Liquid Glass, Firebase behind it, and a release pipeline that would look at home in a bank: four environments, Xcode Cloud, fastlane and 1,000+ unit tests.", "th": "SwiftUI ล้วนบน iOS 26 ใช้ Liquid Glass แบ็กเอนด์ Firebase ส่วน release pipeline จัดเต็มระดับแอปธนาคาร: 4 environment, Xcode Cloud, fastlane และยูนิตเทสต์ 1,000+ ตัว" }
+      ],
+      "timeline": [
+        { "when": "2024", "text": { "en": "Started, solo. First commit, many rewrites.", "th": "เริ่มทำคนเดียว commit แรก ตามด้วย rewrite อีกหลายรอบ" }},
+        {
+          "text": { "en": "Firebase backend: Firestore, Cloud Functions, Apple + Google sign-in, App Check, security rules tested in the emulator.", "th": "แบ็กเอนด์ Firebase: Firestore, Cloud Functions, ล็อกอิน Apple + Google, App Check และ security rules ที่มีเทสต์บน emulator" }
+        },
+        { "text": { "en": "DEV / SIT / UAT / PROD with Xcode Cloud + fastlane CI.", "th": "แยก DEV / SIT / UAT / PROD พร้อม CI ด้วย Xcode Cloud + fastlane" }},
+        { "when": { "en": "25 Sep 2026", "th": "25 ก.ย. 2026" }, "text": { "en": "First UAT build on TestFlight.", "th": "ปล่อย build UAT แรกขึ้น TestFlight" }},
+        {
+          "when": { "en": "5 Nov 2026", "th": "5 พ.ย. 2026" },
+          "text": { "en": "1.0 submitted, with the compliance homework done: 18+ age gate, in-app legal acceptance, privacy labels.", "th": "ส่ง 1.0 เข้ารีวิว การบ้านเรื่อง compliance ครบ: จำกัดอายุ 18+ ยอมรับข้อตกลงในแอป และ privacy label" }
+        },
+        { "when": { "en": "16 Nov 2026", "th": "16 พ.ย. 2026" }, "text": { "en": "Approved by App Review. 🎉", "th": "ผ่าน App Review 🎉" }},
+        { "when": { "en": "30 Nov 2026", "th": "30 พ.ย. 2026" }, "text": { "en": "Launch day.", "th": "วันเปิดตัว" }}
+      ]
+    }
   },
   {
     "emoji": "🌸",
     "title": "Orchid",
     "role": { "en": "Self-hosted AI-first project management", "th": "ระบบจัดการโปรเจกต์ AI-first แบบ self-host" },
     "when": { "en": "Aug 2026 – now", "th": "ส.ค. 2026 – ปัจจุบัน" },
-    "description": {
-      "en": "A task board where AI agents are teammates: GitHub issues as Phase → Feature → Task, an MCP server for agents to claim work and propose changes, and a human approve code on every change. Its convention plugin found ==20/20 planted violations with 0 false positives== on a holdout repo, and when agents were asked to break 12 rules, they shipped 0.",
-      "th": "บอร์ดงานที่ AI agent เป็นเพื่อนร่วมทีม แตกงานจาก GitHub issue เป็น Phase → Feature → Task มี MCP server ให้ agent จองงานและเสนอแก้ แต่ต้องมีคนกด approve ทุกครั้ง ปลั๊กอินคุม convention จับจุดผิดที่ฝังไว้ได้ ==20/20 ไม่มี false positive== บน repo ทดสอบ แล้วพอสั่งให้ agent แหกกฎ 12 ข้อ ผลออกมาไม่ผิดสักข้อ"
-    },
+    "description": { "en": "A task board where AI agents are teammates: GitHub issues as Phase → Feature → Task, an MCP server for agents to claim work and propose changes, and a human approve code on every change. Its convention plugin found ==20/20 planted violations with 0 false positives== on a holdout repo, and when agents were asked to break 12 rules, they shipped 0.", "th": "บอร์ดงานที่ AI agent เป็นเพื่อนร่วมทีม แตกงานจาก GitHub issue เป็น Phase → Feature → Task มี MCP server ให้ agent จองงานและเสนอแก้ แต่ต้องมีคนกด approve ทุกครั้ง ปลั๊กอินคุม convention จับจุดผิดที่ฝังไว้ได้ ==20/20 ไม่มี false positive== บน repo ทดสอบ แล้วพอสั่งให้ agent แหกกฎ 12 ข้อ ผลออกมาไม่ผิดสักข้อ" },
     "tags": ["TypeScript", "SQLite", "MCP", "Claude Code"],
-    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } },
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" }},
     "links": [
       { "label": "orchid-board ↗", "url": "https://github.com/jernie-apps/orchid-board" },
       { "label": "orchid-convention ↗", "url": "https://github.com/jernie-apps/orchid-convention" }
-    ]
+    ],
+    "details": {
+      "what": [
+        { "en": "Self-hosted project management where ==AI agents are teammates, not toys.== Work comes from GitHub issues, split into Phase → Feature → Task. Agents claim tasks and propose changes through an MCP server, and a human approves every change.", "th": "ระบบจัดการโปรเจกต์แบบ self-host ที่==AI agent เป็นเพื่อนร่วมทีม ไม่ใช่ของเล่น== งานมาจาก GitHub issue แตกเป็น Phase → Feature → Task ให้ agent จองงานและเสนอแก้ผ่าน MCP server แต่ทุกการเปลี่ยนแปลงต้องมีคนกด approve" },
+        { "en": "Its sidekick, orchid-convention, is a Claude Code / Codex plugin that enforces coding conventions while the agent writes: a guard before each write, a linter, and a whole-repo gate before the turn ends.", "th": "คู่หูของมันคือ orchid-convention ปลั๊กอินสำหรับ Claude Code / Codex ที่คุม convention ตั้งแต่ตอน agent เขียนโค้ด: มี guard ก่อนเขียนทุกครั้ง มี linter และมี gate สแกนทั้ง repo ก่อนจบ turn" }
+      ],
+      "timeline": [
+        { "when": { "en": "Aug 2026", "th": "ส.ค. 2026" }, "text": { "en": "Started.", "th": "เริ่มทำ" }},
+        {
+          "text": { "en": "Convention plugin: guard, lint, gate, plus a Swift rule pack. Secrets and PII-in-logs rules can't be waived.", "th": "ปลั๊กอิน convention: guard, lint, gate พร้อมชุดกฎ Swift ส่วนกฎเรื่อง secret และ PII ใน log ห้ามขอยกเว้น" }
+        },
+        {
+          "when": { "en": "Nov 2026", "th": "พ.ย. 2026" },
+          "text": { "en": "Holdout-repo test: 20/20 planted violations found across 3 runs, 0 false positives. Asked to break 12 rules, agents shipped 0.", "th": "ทดสอบบน repo ที่กันไว้: เจอจุดผิดที่ฝังไว้ 20/20 ครบทั้ง 3 รอบ ไม่มี false positive สั่ง agent ให้แหกกฎ 12 ข้อ ผลออกมาไม่ผิดสักข้อ" }
+        },
+        { "text": { "en": "Now: in development, both repos public on GitHub.", "th": "ตอนนี้: กำลังพัฒนา ทั้งสอง repo เปิด public บน GitHub แล้ว" }}
+      ]
+    }
   },
   {
     "emoji": "🧾",
     "title": "Lognie",
     "role": { "en": "Privacy-first finance", "th": "แอปการเงินที่เน้นความเป็นส่วนตัว" },
     "when": { "en": "Aug 2026 – now", "th": "ส.ค. 2026 – ปัจจุบัน" },
-    "description": {
-      "en": "Scans Thai bank e-slips fully on-device: QR verification plus dual-pass OCR. Benchmarked on 2,656 real slips. No backend, no peeking.",
-      "th": "สแกนสลิปโอนเงินธนาคารไทยบนเครื่องทั้งหมด ตรวจ QR และ OCR สองรอบ ทดสอบกับสลิปจริง 2,656 ใบ ไม่มีแบ็กเอนด์ ไม่มีใครแอบดู"
-    },
+    "description": { "en": "Scans Thai bank e-slips fully on-device: QR verification plus dual-pass OCR. Benchmarked on 2,656 real slips. No backend, no peeking.", "th": "สแกนสลิปโอนเงินธนาคารไทยบนเครื่องทั้งหมด ตรวจ QR และ OCR สองรอบ ทดสอบกับสลิปจริง 2,656 ใบ ไม่มีแบ็กเอนด์ ไม่มีใครแอบดู" },
     "tags": ["SwiftUI", "SwiftData", "Vision"],
-    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" }},
+    "details": {
+      "what": [
+        { "en": "Personal finance that ==never leaves your device.== It scans Thai bank e-slips with Apple Vision: a QR check plus a second OCR pass that catches misreads. iPhone, iPad and Mac, no backend at all.", "th": "แอปการเงินที่==ข้อมูลไม่เคยออกจากเครื่อง== สแกนสลิปโอนเงินธนาคารไทยด้วย Apple Vision ตรวจ QR แล้ว OCR ซ้ำอีกรอบเพื่อจับจุดที่อ่านพลาด ใช้ได้ทั้ง iPhone, iPad และ Mac ไม่มีแบ็กเอนด์เลย" }
+      ],
+      "timeline": [
+        { "when": { "en": "Aug 2026", "th": "ส.ค. 2026" }, "text": { "en": "Started.", "th": "เริ่มทำ" }},
+        {
+          "text": { "en": "Parsers for KBank MAKE, K PLUS, Bangkok Bank and Paotang. QR-based dedupe, ledger posting, reconciliation.", "th": "parser สำหรับ KBank MAKE, K PLUS, กรุงเทพ และเป๋าตัง กันสลิปซ้ำด้วย QR ลงบัญชี และกระทบยอด" }
+        },
+        {
+          "text": { "en": "macOS CLI harness benchmarks the parser on 2,656 real slips; 86 automated tests.", "th": "ทำ CLI บน macOS ไว้ benchmark parser กับสลิปจริง 2,656 ใบ มีเทสต์อัตโนมัติ 86 ตัว" }
+        },
+        {
+          "text": { "en": "Now: prototyping bank-agnostic extraction with iOS 26 RecognizeDocumentsRequest.", "th": "ตอนนี้: ลองทำระบบอ่านสลิปแบบไม่ผูกกับธนาคาร ด้วย RecognizeDocumentsRequest ของ iOS 26" }
+        }
+      ]
+    }
   },
   {
     "emoji": "📓",
     "title": "Jotnie",
     "role": { "en": "Conversational journal", "th": "ไดอารี่แบบแชท" },
     "when": { "en": "Sep 2026 – now", "th": "ก.ย. 2026 – ปัจจุบัน" },
-    "description": {
-      "en": "A journal you talk to instead of type into, powered by on-device Apple Foundation Models. Mood tags drive the visuals.",
-      "th": "ไดอารี่ที่คุยด้วยแทนการนั่งพิมพ์ ขับเคลื่อนด้วย Apple Foundation Models บนเครื่อง แท็กอารมณ์แล้วภาพเปลี่ยนตาม"
-    },
+    "description": { "en": "A journal you talk to instead of type into, powered by on-device Apple Foundation Models. Mood tags drive the visuals.", "th": "ไดอารี่ที่คุยด้วยแทนการนั่งพิมพ์ ขับเคลื่อนด้วย Apple Foundation Models บนเครื่อง แท็กอารมณ์แล้วภาพเปลี่ยนตาม" },
     "tags": ["SwiftUI", "Foundation Models"],
-    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" } }
+    "status": { "type": "dev", "label": { "en": "🛠️ In development", "th": "🛠️ กำลังพัฒนา" }},
+    "details": {
+      "what": [
+        { "en": "A journal you talk to instead of type into. A reflective chat runs fully on-device with Apple Foundation Models, and ==your mood tags change how the app looks.==", "th": "ไดอารี่ที่ใช้คุยแทนการนั่งพิมพ์ แชทชวนทบทวนตัวเองที่รันบนเครื่องทั้งหมดด้วย Apple Foundation Models และ==แท็กอารมณ์จะเปลี่ยนหน้าตาแอปตามใจคุณ==" }
+      ],
+      "timeline": [
+        { "when": { "en": "Sep 2026", "th": "ก.ย. 2026" }, "text": { "en": "Started.", "th": "เริ่มทำ" }},
+        {
+          "text": { "en": "Hardened the chat: streaming cancel, transcript integrity, idle check-ins, model-failure recovery; 44 controlled tests.", "th": "ทำแชทให้ทนมือ: ยกเลิก streaming ได้ transcript ไม่เพี้ยน ชวนคุยเมื่อเงียบนาน และกู้คืนเมื่อโมเดลพัง มีเทสต์ 44 ตัว" }
+        },
+        { "text": { "en": "Now: in development.", "th": "ตอนนี้: กำลังพัฒนา" }}
+      ]
+    }
   }
 ]

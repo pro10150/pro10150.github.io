@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { LangContext, Rich, T, pick } from './i18n';
 import Card from './components/Card';
+import ProjectDialog from './components/ProjectDialog';
 import SectionHead from './components/SectionHead';
 
 import site from './data/site.json';
@@ -34,6 +35,47 @@ function ThemeToggle({ lang }) {
     <button className="toggle" type="button" onClick={flip} aria-label={pick(ui.nav.themeLabel, lang)}>
       {theme === 'dark' ? '☀️' : '🌙'}
     </button>
+  );
+}
+
+// Side projects open a details overlay. URL hash #side/<slug> makes it shareable.
+const slugOf = (item) => pick(item.title, 'en').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+function SideGrid() {
+  const [open, setOpen] = useState(null);
+  const pushed = useRef(false);
+  useEffect(() => {
+    const sync = () => {
+      const m = window.location.hash.match(/^#side\/(.+)$/);
+      const hit = m && sideProjects.find((p) => p.details && slugOf(p) === m[1]);
+      setOpen(hit ? slugOf(hit) : null);
+      if (!hit) pushed.current = false;
+    };
+    sync();
+    window.addEventListener('hashchange', sync);
+    return () => window.removeEventListener('hashchange', sync);
+  }, []);
+  const show = (item) => {
+    window.history.pushState(null, '', `#side/${slugOf(item)}`);
+    pushed.current = true;
+    setOpen(slugOf(item));
+  };
+  const close = () => {
+    const slug = open;
+    setOpen(null);
+    if (pushed.current) { pushed.current = false; window.history.back(); }
+    else window.history.replaceState(null, '', '#side');
+    requestAnimationFrame(() => document.querySelector(`button[data-slug="${slug}"]`)?.focus());
+  };
+  const current = sideProjects.find((p) => slugOf(p) === open);
+  return (
+    <>
+      <div className="grid">
+        {sideProjects.map((item, i) => (
+          <Card key={i} item={item} slug={slugOf(item)} onOpen={() => show(item)} />
+        ))}
+      </div>
+      {current && <ProjectDialog item={current} onClose={close} />}
+    </>
   );
 }
 
@@ -215,7 +257,7 @@ export default function App({ lang = 'en' }) {
         </section>
         <section className="wrap" id="side">
           <SectionHead copy={ui.sections.side} />
-          <div className="grid">{sideProjects.map((item, i) => <Card key={i} item={item} />)}</div>
+          <SideGrid />
         </section>
         <Story />
         <About lang={lang} />

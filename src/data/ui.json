@@ -47,5 +47,11 @@
       "tbc": "To be continued →"
     }
   },
-  "footer": { "en": "Directed, written & debugged by Por.\nBugs also by Por. 🐛", "th": "กำกับ เขียนบท และดีบักโดยปอ\nบั๊กก็โดยปอเหมือนกัน 🐛" }
+  "footer": { "en": "Directed, written & debugged by Por.\nBugs also by Por. 🐛", "th": "กำกับ เขียนบท และดีบักโดยปอ\nบั๊กก็โดยปอเหมือนกัน 🐛" },
+  "details": {
+    "open": { "en": "Details →", "th": "รายละเอียด →" },
+    "what": { "en": "What it is", "th": "มันคืออะไร" },
+    "timeline": { "en": "Timeline", "th": "ไทม์ไลน์" },
+    "close": { "en": "Close", "th": "ปิด" }
+  }
 }
