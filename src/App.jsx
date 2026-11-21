@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { LangContext, Rich, T, pick } from './i18n';
 import Card from './components/Card';
+import ProjectDialog from './components/ProjectDialog';
+import { cardFor, turnCard } from './flip';
 import SectionHead from './components/SectionHead';
 
 import site from './data/site.json';
@@ -34,6 +36,59 @@ function ThemeToggle({ lang }) {
     <button className="toggle" type="button" onClick={flip} aria-label={pick(ui.nav.themeLabel, lang)}>
       {theme === 'dark' ? '☀️' : '🌙'}
     </button>
+  );
+}
+
+// Side projects open a details overlay. URL hash #side/<slug> makes it shareable.
+const slugOf = (item) => pick(item.title, 'en').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+function SideGrid() {
+  const [open, setOpen] = useState(null);
+  const [flipFrom, setFlipFrom] = useState(null);
+  const pushed = useRef(false);
+  const hidden = useRef(null);
+  const reveal = () => { if (hidden.current) { hidden.current.style.visibility = ''; hidden.current = null; } };
+  useEffect(() => {
+    const sync = () => {
+      const m = window.location.hash.match(/^#side\/(.+)$/);
+      const hit = m && sideProjects.find((p) => p.details && slugOf(p) === m[1]);
+      setOpen(hit ? slugOf(hit) : null);
+      if (!hit) { pushed.current = false; setFlipFrom(null); reveal(); }
+    };
+    sync();
+    window.addEventListener('hashchange', sync);
+    return () => window.removeEventListener('hashchange', sync);
+  }, []);
+  const show = async (item) => {
+    const slug = slugOf(item);
+    const card = cardFor(slug);
+    await turnCard(card);
+    if (card) { card.style.visibility = 'hidden'; hidden.current = card; }
+    window.history.pushState(null, '', `#side/${slug}`);
+    pushed.current = true;
+    setFlipFrom(card || null);
+    setOpen(slug);
+  };
+  const close = () => {
+    const slug = open;
+    const card = hidden.current;
+    setOpen(null);
+    setFlipFrom(null);
+    reveal();
+    if (pushed.current) { pushed.current = false; window.history.back(); }
+    else window.history.replaceState(null, '', '#side');
+    turnCard(card, true);
+    requestAnimationFrame(() => document.querySelector(`button[data-slug="${slug}"]`)?.focus({ preventScroll: true }));
+  };
+  const current = sideProjects.find((p) => slugOf(p) === open);
+  return (
+    <>
+      <div className="grid">
+        {sideProjects.map((item, i) => (
+          <Card key={i} item={item} slug={slugOf(item)} onOpen={() => show(item)} />
+        ))}
+      </div>
+      {current && <ProjectDialog item={current} from={flipFrom} onClose={close} />}
+    </>
   );
 }
 
@@ -215,7 +270,7 @@ export default function App({ lang = 'en' }) {
         </section>
         <section className="wrap" id="side">
           <SectionHead copy={ui.sections.side} />
-          <div className="grid">{sideProjects.map((item, i) => <Card key={i} item={item} />)}</div>
+          <SideGrid />
         </section>
         <Story />
         <About lang={lang} />

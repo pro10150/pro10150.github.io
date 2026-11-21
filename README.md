@@ -12,7 +12,7 @@ All content lives in **`src/data/`**. Edit a JSON file, push to `main`, and GitH
 | `hero.json` | Top of the page: greeting, tagline, intro, role chips, freelance note |
 | `stats.json` | The 4 number tiles |
 | `work.json` | Client project cards (Chapter 02) |
-| `side-projects.json` | Personal project cards (Chapter 03) |
+| `side-projects.json` | Personal project cards (Chapter 03). Optional `details` adds a "Details →" overlay (see below) |
 | `experience.json` | Job timeline (Chapter 04) |
 | `about.json` | About paragraphs + the "Inventory" box |
 | `skills.json` | Skill groups and tags |
@@ -27,6 +27,20 @@ All content lives in **`src/data/`**. Edit a JSON file, push to `main`, and GitH
 - Text that's the same in both languages: a plain string, `"Swift"`.
 - Text that differs: `{ "en": "...", "th": "..." }`.
 - Inside text: `**bold**`, `==yellow highlight==`, and `\n` for a line break.
+
+### Project details overlay (side projects only)
+
+Add `details` to a card in `side-projects.json` and it gets a "Details →" button that opens an overlay. It also gets a shareable link: `#side/<title in lowercase>`, e.g. `#side/jernie`. Work cards never show it, even with `details`: keep client info off it.
+
+```json
+"details": {
+  "what": [{ "en": "Paragraph…", "th": "ย่อหน้า…" }],
+  "timeline": [
+    { "when": { "en": "25 Sep 2026", "th": "25 ก.ย. 2026" }, "text": { "en": "First TestFlight build.", "th": "…" } },
+    { "text": { "en": "A step with no date (shows a small dot).", "th": "…" } }
+  ]
+}
+```
 
 ### Common edits
 

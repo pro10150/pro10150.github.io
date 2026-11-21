@@ -167,3 +167,51 @@ a.cert:hover{border-color:var(--accent)}
  .li{grid-template-columns:1fr;gap:6px}
  .contact{padding:32px}
 }
+
+/* Side-project details overlay */
+button.more.details{background:none;border:0;padding:0;font:inherit;font-size:13px;font-weight:800;cursor:pointer;margin-left:auto}
+.foot button.more.details:hover{text-decoration:underline}
+html.modal-open{overflow:hidden}
+.pd{border:0;padding:0;margin:auto;width:min(640px,calc(100% - 32px));max-height:min(86vh,860px);border-radius:var(--radius);background:var(--card);color:var(--ink);box-shadow:0 24px 64px rgba(0,0,0,.35);overflow:auto;animation:pd-in .22s ease-out}
+.pd::backdrop{background:rgba(10,14,36,.6);backdrop-filter:blur(4px)}
+.pd-body{position:relative;padding:32px}
+.pd-x{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:0;background:var(--chip);color:var(--ink);font-size:15px;font-weight:800;cursor:pointer}
+.pd-head{display:flex;gap:14px;align-items:center;padding-right:44px}
+.pd-emoji{font-size:44px;transform:rotate(-8deg)}
+.pd h3{font-size:28px;font-weight:900;letter-spacing:-.01em}
+.pd .badge{margin-top:14px}
+.pd h4{font-size:12px;letter-spacing:2px;color:var(--pink);text-transform:uppercase;margin:26px 0 10px}
+.pd p{font-size:15.5px;line-height:1.65;color:var(--mute);margin-top:10px}
+.pd .mark{background:var(--hl);padding:0 5px;border-radius:4px;font-weight:800;color:#1A1F45}
+.pd-tl{list-style:none;margin:0;padding:0}
+.pd-tl li{position:relative;padding:0 0 18px 30px;font-size:14.5px;line-height:1.55;color:var(--mute)}
+.pd-tl li:before{content:"";position:absolute;left:0;top:4px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--card);z-index:1}
+.pd-tl li:after{content:"";position:absolute;left:6px;top:12px;bottom:-4px;border-left:2px dashed var(--line)}
+.pd-tl li:last-child{padding-bottom:0}.pd-tl li:last-child:after{display:none}
+.pd-tl li:last-child:before{background:var(--pink)}
+.pd-tl li.undated:before{width:10px;height:10px;left:2px;top:6px;background:var(--line)}
+.pd-tl b{display:block;color:var(--ink);font-size:13px;font-weight:800}
+.pd .foot{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);display:flex;gap:16px;flex-wrap:wrap}
+.pd.jernie{background:linear-gradient(160deg,var(--coral2),var(--coral))}
+.pd.jernie h3,.pd.jernie p,.pd.jernie .pd-tl li,.pd.jernie .pd-tl b,.pd.jernie .more{color:#1A1010}
+.pd.jernie .role,.pd.jernie h4{color:#fff}
+.pd.jernie .pd-x{background:rgba(255,255,255,.7);color:#1A1010}
+.pd.jernie .pd-tl li:before{background:#fff;box-shadow:0 0 0 4px var(--coral2)}
+.pd.jernie .pd-tl li:last-child:before{background:var(--hl)}
+.pd.jernie .pd-tl li.undated:before{background:rgba(255,255,255,.55)}
+.pd.jernie .pd-tl li:after{border-color:rgba(26,16,16,.25)}
+.pd.jernie .foot{border-color:rgba(26,16,16,.2)}
+@keyframes pd-in{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@media (max-width:640px){
+  .pd{width:100%;max-width:100%;max-height:92vh;margin:auto 0 0;border-radius:24px 24px 0 0;animation:pd-up .25s ease-out}
+  .pd-body{padding:28px 22px 36px}
+  .pd h3{font-size:24px}
+}
+@keyframes pd-up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.pd{animation:none}}
+.pd-body:focus{outline:none}
+html[lang=th] .pd h4{letter-spacing:.5px;font-size:13px}
+.pd.flip{animation:none;backface-visibility:hidden;will-change:transform}
+.pd.flip::backdrop{animation:pd-fade .3s ease-out}
+.pd.leaving::backdrop{opacity:0;transition:opacity .2s}
+@keyframes pd-fade{from{opacity:0}to{opacity:1}}
